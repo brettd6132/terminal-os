@@ -1,8 +1,27 @@
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStreamReader
+import org.yaml.snakeyaml.Yaml
+import java.io.File
 
 fun main(args: Array<String>) {
+        val configFile = File("config.yml")
+    val yaml = Yaml()
+    val config = if (configFile.exists()) {
+        configFile.inputStream().use { input ->
+            yaml.load(input)
+        } as? Map<String, Any?> ?: emptyMap()
+    } else {
+        emptyMap()
+    }
+    val name = config["name"] as? String
+    println("Welcome${if (name != null) ", $name" else ""}!")
+    val commandHandler = CommandHandler()
+    commandHandler.registerCommandsInDirectory("commands")
+    while (true) {
+        print("> ")
+        val input = readLine() ?: break
+        commandHandler.executeCommand(input)
     val reader = BufferedReader(InputStreamReader(System.`in`))
     var input: String
     while (true) {
@@ -47,7 +66,7 @@ fun main(args: Array<String>) {
         }
     }
 }
-
+    
 interface Command {
     fun execute(args: List<String>)
 }
