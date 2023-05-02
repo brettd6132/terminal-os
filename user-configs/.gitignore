@@ -1,0 +1,28 @@
+# Gradle files
+.gradle/
+build/
+
+# IntelliJ IDEA files
+.idea/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# OS-specific files
+*.iml
+*.ipr
+*.iws
+*.DS_Store
+Thumbs.db
+
+# Logs and temp files
+log/
+temp/
+
+# User-specific files
+config/user.yml
+
+# Environment files
+.env
