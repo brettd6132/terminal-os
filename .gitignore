@@ -1,32 +1,21 @@
-# Gradle build output
+# Gradle
+.gradle/
 build/
 
 # IntelliJ IDEA
 .idea/
 *.iml
-*.iws
 *.ipr
+*.iws
 
 # Eclipse
-.metadata/
-bin/
-*.classpath
+.settings/
 *.project
-*.settings/
+*.classpath
 
 # Other
 out/
-*.log
-*.swp
-
-# Ignore user config files
-user.yml
-
-# Ignore license key files
-licenses/*.lic
-
-# Ignore environment variable file
+logs/
 .env
-
-# Ignore generated documentation
-docs/
+user_licenses.yml
+licenses/
