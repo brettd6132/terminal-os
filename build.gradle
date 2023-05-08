@@ -6,7 +6,7 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
     implementation 'org.jline:jline:3.19.0'
-    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.13.4.1'
     implementation 'com.github.kittinunf.fuel:fuel:2.3.1'
     implementation 'com.github.kittinunf.fuel:fuel-jackson:2.3.1'
     implementation "com.typesafe:config:1.4.1"
